@@ -34,7 +34,7 @@
 
   "modules-left": ["custom/files", "hyprland/workspaces"],
 
-  "modules-center": ["custom/launcher","custom/media", "custom/cliphist"],
+  "modules-center": ["custom/launcher","custom/media", "custom/shortcuts"],
 
   // "modules-right": ["network", "pulseaudio", "battery", "tray"]
   "modules-right": ["group/hardware", "clock", "custom/poweroff"]

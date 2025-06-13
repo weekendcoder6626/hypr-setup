@@ -1,0 +1,14 @@
+# Required system packages for running the Tkinter GUI for Hyprland keybindings
+
+# Tkinter GUI toolkit
+python3-tk
+
+# (Optional) GTK themes for better look and feel on dark themes
+gtk3
+ttk-ubuntu       # For some distros like Ubuntu to ensure themed widgets
+
+# (Optional) Notification support if extended with notify-send
+libnotify-bin
+
+# Text editor or terminal file viewer (optional for external keybindings config)
+nano             # Or any other terminal editor

@@ -74,6 +74,29 @@ window#waybar.hidden {
     background: @hover-background;
 }
 
+#custom-shortcuts {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 100px;
+    /* margin-left: 10px; */
+    margin-top: 5px;
+    /* border-top-left-radius: 0;
+    border-top--radius: 0; */
+    /* border-bottom-left-radius: 0; */
+    border-color: @border-color;
+    transition: background 0.3s ease, border-radius 0.3s ease;
+    color: @text-dark;
+    background: @background-dark;
+    /* font-weight: bold; */
+    font-size: 16px;
+}
+
+#custom-shortcuts:hover {
+    background: @hover-background;
+}
+
 #workspaces {
     margin: 9px 0px 3px 10px;
     padding-top: 3px;

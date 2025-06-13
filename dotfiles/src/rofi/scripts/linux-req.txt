@@ -1,0 +1,13 @@
+# System Packages for GPaste + Rofi Clipboard Manager
+
+# Clipboard Manager
+gpaste             # Required for accessing and selecting clipboard history
+
+# Menu Interface
+rofi               # Used to display clipboard entries and make a selection
+
+# Notification Support
+libnotify-bin      # Provides the `notify-send` command
+
+# (Optional) If using a custom launcher script
+bash               # To run launcher.sh

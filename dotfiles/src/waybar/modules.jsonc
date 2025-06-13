@@ -9,10 +9,16 @@
   "custom/cliphist": {
     "format": "",
     // "interval": 7200,
-    "on-click": "python /home/vs-horcrux/.config/rofi/scripts/gpaste-hist.py"
+    "on-click": "python /home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/rofi/scripts/gpaste-hist.py"
     // "signal": 8
   },
 
+  "custom/shortcuts": {
+    "format": "󰌌",
+    // "interval": 7200,
+    "on-click": "python /home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/hypr/utils/hyprbind-gui/keybindings.py"
+    // "signal": 8
+  },
 
   // Workspaces
   "hyprland/workspaces": {
@@ -41,9 +47,7 @@
 
   "custom/poweroff": {
     "format": "  ",
-    // "interval": 7200,
-    "on-click": "~/scripts/power-menu.sh",
-    "signal": 8
+    "on-click": "bash /home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/rofi/scripts/power-menu.sh"
   },
 
   "custom/media": {
@@ -57,20 +61,21 @@
       "arch": ""
     },
     "interval": 2,
-    "on-click": "/home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/waybar/scripts/media/redirect-media.sh",
-    "exec": "/home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/waybar/scripts/media/media.sh",
+    "on-click": "bash /home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/waybar/scripts/media/redirect-media.sh",
+    "exec": "bash /home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/waybar/scripts/media/media.sh",
     "max-length": 60,
     "min-length": 60
   },
 
   "clock": {
     "tooltip-format": "{:%A, %d %B %Y}",
-    "format": "{:%H:%M}"
+    "format": "{:%H:%M}",
+    "on-click": "bash /home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/rofi/scripts/time-tools.sh"
   },
 
   "custom/cava": {
     "format": " {}",
-    "exec": "/home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/waybar/scripts/cava.sh",
+    "exec": "bash /home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/waybar/scripts/cava.sh",
     "max-length": 40,
     "min-length": 40
   },
@@ -80,7 +85,6 @@
     "format-ethernet": " 󰈀 ",
     "format-disconnected": " 󰤭 ",
     "tooltip-format": "Upload: {bandwidthUpBytes} \nDownload: {bandwidthDownBytes}"
-    // "on-click": "/home/lostfromlight/.config/waybar/scripts/nmtui.sh"
   },
 
   "pulseaudio": {
@@ -112,16 +116,16 @@
     "format-icons": [" ", " ", " ", " ", " "]
   },
 
-    // Bluetooth
+  // Bluetooth
   "bluetooth": {
     // "format-disabled": "",
     // "format-off": "",
     "format": "\uF293 {status}",
     "format-disabled": " 󰂲 ",
-    "format-on": " 󰂱 "  ,
+    "format-on": " 󰂱 ",
     "format-connected": " 󰂯 ", //  with devices connected
     "interval": 30,
-    "on-click": "blueman-manager",
+    "on-click": "blueman-manager"
   },
 
   "tray": {
@@ -141,8 +145,6 @@
     "modules": ["network", "bluetooth", "pulseaudio", "battery"]
   }
 }
-
-
 
 // //  __  __           _       _
 // // |  \/  | ___   __| |_   _| | ___  ___

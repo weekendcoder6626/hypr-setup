@@ -1,0 +1,16 @@
+# System Packages for Wallpaper Picker App
+
+# GUI Support for Python
+python3-tk            # Tkinter GUI toolkit (Ubuntu/Debian)
+tk                    # Tkinter (Arch Linux)
+
+# Image Processing
+python3-pil.imagetk   # Pillow support with ImageTk (Ubuntu/Debian)
+python-pillow         # Pillow for Arch Linux
+
+# Wallpaper Manager
+hyprpaper             # Wallpaper manager for Hyprland
+
+# Script Support
+bash                  # Required to run shell scripts
+procps                # Provides pkill used to restart hyprpaper
