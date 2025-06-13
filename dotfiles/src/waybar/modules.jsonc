@@ -1,0 +1,363 @@
+{
+  "custom/launcher": {
+    "format": "󱓞",
+    // "interval": 7200,
+    "on-click": "notify-send \"Opening Rofi\" -t 500 && uwsm app -- /home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/rofi/launcher.sh -show drun -show-icons true"
+    // "signal": 8
+  },
+
+  "custom/cliphist": {
+    "format": "",
+    // "interval": 7200,
+    "on-click": "python /home/vs-horcrux/.config/rofi/scripts/gpaste-hist.py"
+    // "signal": 8
+  },
+
+
+  // Workspaces
+  "hyprland/workspaces": {
+    // "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    // "on-click": "",
+    // "format": "{}",
+    "format": "{}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  "custom/files": {
+    "format": "    ",
+    // "interval": 7200,
+    "on-click": "thunar"
+    // "signal": 8
+  },
+
+  "custom/poweroff": {
+    "format": "  ",
+    // "interval": 7200,
+    "on-click": "~/scripts/power-menu.sh",
+    "signal": 8
+  },
+
+  "custom/media": {
+    "return-type": "json",
+    // "format": " {}",
+    "format": "{icon} {text}",
+    "format-icons": {
+      "spotify": "",
+      "browser": "",
+      "media": "",
+      "arch": ""
+    },
+    "interval": 2,
+    "on-click": "/home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/waybar/scripts/media/redirect-media.sh",
+    "exec": "/home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/waybar/scripts/media/media.sh",
+    "max-length": 60,
+    "min-length": 60
+  },
+
+  "clock": {
+    "tooltip-format": "{:%A, %d %B %Y}",
+    "format": "{:%H:%M}"
+  },
+
+  "custom/cava": {
+    "format": " {}",
+    "exec": "/home/vs-horcrux/Desktop/working-dir/hypr-setup/dotfiles/src/waybar/scripts/cava.sh",
+    "max-length": 40,
+    "min-length": 40
+  },
+
+  "network": {
+    "format-wifi": " 󰖩 ",
+    "format-ethernet": " 󰈀 ",
+    "format-disconnected": " 󰤭 ",
+    "tooltip-format": "Upload: {bandwidthUpBytes} \nDownload: {bandwidthDownBytes}"
+    // "on-click": "/home/lostfromlight/.config/waybar/scripts/nmtui.sh"
+  },
+
+  "pulseaudio": {
+    "reverse-scrolling": 1,
+    "format": " {icon} ",
+    "format-bluetooth": " {icon} ",
+    "format-muted": " 󰖁 ",
+    "format-source-muted": " muted ",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󱄠"]
+    },
+    "on-click": "pavucontrol",
+    "tooltip-format": "{desc} - {volume}%"
+    // "min-length": 13
+  },
+
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}{capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": [" ", " ", " ", " ", " "]
+  },
+
+    // Bluetooth
+  "bluetooth": {
+    // "format-disabled": "",
+    // "format-off": "",
+    "format": "\uF293 {status}",
+    "format-disabled": " 󰂲 ",
+    "format-on": " 󰂱 "  ,
+    "format-connected": " 󰂯 ", //  with devices connected
+    "interval": 30,
+    "on-click": "blueman-manager",
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 4
+  },
+
+  // Group Hardware
+  "group/hardware": {
+    "orientation": "horizontal",
+    // "drawer": {
+    //   "transition-duration": 300,
+    //   "children-class": "not-memory",
+    //   "open": true
+    //   // "transition-left-to-right": false
+    // },
+    "modules": ["network", "bluetooth", "pulseaudio", "battery"]
+  }
+}
+
+
+
+// //  __  __           _       _
+// // |  \/  | ___   __| |_   _| | ___  ___
+// // | |\/| |/ _ \ / _` | | | | |/ _ \/ __|
+// // | |  | | (_) | (_| | |_| | |  __/\__ \
+// // |_|  |_|\___/ \__,_|\__,_|_|\___||___/
+// //
+// //
+// // by Stephan Raabe (2023)
+// // -----------------------------------------------------
+// //
+// {
+//   // Rofi Application Launcher
+//   "custom/appmenu": {
+//     "format": "Apps",
+//     "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings",
+//     "on-click": "rofi -show drun",
+//     // "on-click-right": "~/.config/ml4w/scripts/keybindings.sh",
+//     "tooltip": false
+//   },
+
+//   // Hyprland Window
+//   "hyprland/window": {
+//     "rewrite": {
+//       "(.*) - Brave": "$1",
+//       "(.*) - Chromium": "$1",
+//       "(.*) - Brave Search": "$1",
+//       "(.*) - Outlook": "$1",
+//       "(.*) Microsoft Teams": "$1"
+//     },
+//     "separate-outputs": true
+//   },
+
+//   // Workspaces
+//   "hyprland/workspaces": {
+//     // "on-click": "activate",
+//     "active-only": false,
+//     "all-outputs": true,
+//     "format": "{}",
+//     "format-icons": {
+//       "urgent": "",
+//       "active": "",
+//       "default": ""
+//     },
+//     "persistent-workspaces": {
+//       "*": 5
+//     }
+//   },
+
+//   // Keyboard State
+//   "keyboard-state": {
+//     "numlock": true,
+//     "capslock": true,
+//     "format": "{name} {icon}",
+//     "format-icons": {
+//       "locked": "",
+//       "unlocked": ""
+//     }
+//   },
+
+//   // System tray
+//   "tray": {
+//     // "icon-size": 21,
+//     "spacing": 10
+//   },
+
+//   // Clock
+//   "clock": {
+//     // "timezone": "America/New_York",
+//     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+//     "format-alt": "{:%Y-%m-%d}"
+//   },
+
+//   // System
+//   "custom/system": {
+//     "format": "",
+//     "tooltip": false
+//   },
+
+//   // CPU
+//   "cpu": {
+//     "format": "/ C {usage}% ",
+//     "on-click": "alacritty -e htop"
+//   },
+
+//   // Memory
+//   "memory": {
+//     "format": "/ M {}% ",
+//     "on-click": "alacritty -e htop"
+//   },
+
+//   // Harddisc space used
+//   "disk": {
+//     "interval": 30,
+//     "format": "D {percentage_used}% ",
+//     "path": "/",
+//     "on-click": "alacritty -e htop"
+//   },
+
+//   "hyprland/language": {
+//     "format": "/ K {short}"
+//   },
+
+//   // Group Hardware
+//   "group/hardware": {
+//     "orientation": "inherit",
+//     "drawer": {
+//       "transition-duration": 300,
+//       "children-class": "not-memory",
+//       "transition-left-to-right": false
+//     },
+//     "modules": ["custom/system", "disk", "cpu", "memory", "hyprland/language"]
+//   },
+
+//   // Network
+//   "network": {
+//     "format": "{ifname}",
+//     "format-wifi": "   {signalStrength}%",
+//     "format-ethernet": "  {ipaddr}",
+//     "format-disconnected": "Not connected", //An empty format will hide the module.
+//     "tooltip-format": " {ifname} via {gwaddri}",
+//     "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+//     "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+//     "tooltip-format-disconnected": "Disconnected",
+//     "max-length": 50,
+//     "on-click": "alacritty -e nmtui"
+//   },
+
+//   // Battery
+//   "battery": {
+//     "states": {
+//       // "good": 95,
+//       "warning": 30,
+//       "critical": 15
+//     },
+//     "format": "{icon}   {capacity}%",
+//     "format-charging": "  {capacity}%",
+//     "format-plugged": "  {capacity}%",
+//     "format-alt": "{icon}  {time}",
+//     // "format-good": "", // An empty format will hide the module
+//     // "format-full": "",
+//     "format-icons": [" ", " ", " ", " ", " "]
+//   },
+
+//   "pulseaudio": {
+//     "format": "    ",
+//     // "format-icons": {
+//     //     "headphone": "",
+//     //     "hands-free": "",
+//     //     "headset": "",
+//     //     "phone": "",
+//     //     "portable": "",
+//     //     "car": "",
+//     //     "default": ["", " ", " "]
+//     // },
+//     "on-click": "pavucontrol"
+//   },
+
+//   // "custom/pipewire": {
+//   //   "format": "{icon}",
+//   //   "return-type": "json",
+//   //   "signal": 8,
+//   //   "interval": "once",
+//   //   "format-icons": {
+//   //     "mute": "",
+//   //     "default": ["", "", "", ""]
+//   //   },
+//   //   "exec": "pw-volume status"
+//   // },
+//   "bluetooth": {
+//     // "format-disabled": "",
+//     // "format-off": "",
+//     "format": "\uF293 {status}",
+//     "format-disabled": "   󰂲   ",
+//     "format-on": "   󰂱   "  ,
+//     "format-connected": "   󰂯   ", //  with devices connected
+//     "interval": 30,
+//     "on-click": "blueman-manager",
+//   },
+
+//   // Bluetooth
+//   "bluetooth": {
+//     // "format-disabled": "",
+//     // "format-off": "",
+//     "format": "\uF293 {status}",
+//     "format-disabled": "   󰂲   ",
+//     "format-on": "   󰂱   "  ,
+//     "format-connected": "   󰂯   ", //  with devices connected
+//     "interval": 30,
+//     "on-click": "blueman-manager",
+//   },
+
+//   // Other
+//   "user": {
+//     "format": "{user}",
+//     "interval": 60,
+//     "icon": false
+//   },
+
+//   // Idle Inhibator
+//   "idle_inhibitor": {
+//     "format": "{icon}",
+//     "tooltip": true,
+//     "format-icons": {
+//       "activated": "",
+//       "deactivated": ""
+//     },
+//     "on-click-right": "hyprlock"
+//   },
+
+//   // Power Menu
+//   "custom/exit": {
+//     "format": "",
+//     "tooltip-format": "Powermenu",
+//     "on-click": "wlogout -b 4",
+//     "tooltip": false
+//   }
+// }
