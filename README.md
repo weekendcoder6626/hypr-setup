@@ -4,11 +4,12 @@ My first functional Hyprland setup with rofi and waybar! (Arch)
 
 # Requirements
 
-Working Hyprland setup
+Working Hyprland setup 
 
-Packages:
+Packages: 
 
-waybar
-rofi
-python
-tkinter
+waybar 
+rofi 
+python 
+tkinter 
+kitty 
